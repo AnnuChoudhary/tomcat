@@ -1,6 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
-
+apply plugin: 'war'
 group = 'org.mybatis'
 version = '6.0.3-SNAPSHOT'
 
@@ -33,6 +33,9 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version:'4.12'
     testCompile group: 'org.mockito', name: 'mockito-core', version:'2.7.19'
     testCompile group: 'com.codeborne', name: 'selenide', version:'4.3'
-    providedCompile group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version:'2.2.1'
-    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.0.1'
+    providedCompile   'org.apache.tomcat:tomcat-servlet-api:7.0.37'
+       compile 'com.sun.jersey:jersey-bundle:1.17.1'
+       compile 'com.sun.faces:jsf-api:2.1.19'
+       compile 'com.sun.faces:jsf-impl:2.1.19'
+       compile 'org.eclipse.persistence:javax.persistence:2.0.0'
 }
