@@ -43,3 +43,15 @@ dependencies {
        compile 'com.sun.faces:jsf-impl:2.1.19'
        compile 'org.eclipse.persistence:javax.persistence:2.0.0'
 }
+uploadArchives {
+    repositories {
+       mavenDeployer {
+             repository(url: "http://192.168.99.100:8881/nexus/content/repositories/snapshots") {
+             authentication(userName: "admin", password: "admin123")
+}
+             pom.version = "2.22"
+             pom.artifactId = "jpetstore-6.0.3-SNAPSHOT.war"
+             pom.groupId = "org.jenkins-ci.main"
+       }
+    }
+}
