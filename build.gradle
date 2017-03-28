@@ -58,7 +58,7 @@ uploadArchives {
 }
              pom.version = "2.22"
              pom.artifactId = "jpetstore-6.0.3-SNAPSHOT.war"
-             pom.groupId = "com.example"
+             pom.groupId = "org.jenkins-ci.main"
        }
     }
 }
