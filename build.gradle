@@ -57,7 +57,7 @@ uploadArchives {
              authentication(userName: "admin", password: "admin123")
 }
              pom.version = "2.22"
-             pom.artifactId = "jpetstore-6.0.3-SNAPSHOT.war"
+             pom.artifactId = "jpetstore-6.0.3-SNAPSHOT"
              pom.groupId = "org.gradle.sample"
        }
     }
