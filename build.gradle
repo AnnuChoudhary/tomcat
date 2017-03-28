@@ -58,7 +58,7 @@ uploadArchives {
 }
              pom.version = "2.22"
              pom.artifactId = "jpetstore-6.0.3-SNAPSHOT"
-             pom.groupId = "org.gradle.sample"
+             pom.groupId = "com.example"
        }
     }
 }
