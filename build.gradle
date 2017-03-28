@@ -18,9 +18,7 @@ configurations.all {
 repositories {
         
      maven { url "http://repo.maven.apache.org/maven2" }
-      maven {
-          url "http://localhost:8081/nexus/content/groups/public"
-    }
+      
 }
 
 test {
@@ -49,12 +47,12 @@ dependencies {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://192.168.99.100:8881/nexus/content/repositories/snapshots") {
+             repository(url: "http://192.168.99.100:8881/nexus/content/repositories/snapshots/") {
              authentication(userName: "admin", password: "admin123")
 }
              pom.version = "2.22"
              pom.artifactId = "jpetstore-6.0.3-SNAPSHOT.war"
-             pom.groupId = "org.jenkins-ci.main"
+             pom.groupId = "org.gradle.sample"
        }
     }
 }
