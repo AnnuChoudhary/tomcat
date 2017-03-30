@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'war'
-apply plugin: 'cargo'
+
 group = 'org.mybatis'
 version = '6.0.3-SNAPSHOT'
 
@@ -54,27 +54,7 @@ dependencies {
 }
 
 
-    dependencies {
-        classpath 'bmuschko:gradle-cargo-plugin:0.3'
-    }
-
-cargo {
-    containerId = 'tomcat8x'
-    port = 8888
-    context = 'mycontext'
-    remote {
-        hostname = '192.168.99.100'
-        username = 'tomcat'
-        password = 'secret'
-    }
-}
-dependencies {
-    providedCompile 'javax.servlet:servlet-api:2.5'
-    cargo 'org.codehaus.cargo:cargo-core-uberjar:1.1.1',
-          'org.codehaus.cargo:cargo-ant:1.1.1',
-          'jaxen:jaxen:1.1.1'
-}
-
+   
 uploadArchives {
   repositories {
     mavenDeployer {
