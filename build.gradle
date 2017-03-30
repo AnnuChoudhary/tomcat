@@ -59,13 +59,13 @@ dependencies {
     }
 
 cargo {
-    containerId = 'tomcat6x'
-    port = 8080
+    containerId = 'tomcat8x'
+    port = 8888
     context = 'mycontext'
     remote {
-        hostname = '192.168.1.101'
+        hostname = '192.168.99.100'
         username = 'tomcat'
-        password = 'tomcat'
+        password = 'secret'
     }
 }
 dependencies {
