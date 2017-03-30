@@ -54,13 +54,13 @@ dependencies {
 }
 
 uploadArchives  {
-   
-	 url "http://tomcat:secret@192.168.99.100:8888/manager/text/deploy?path=/jpetstore&update=true"
-            credentials {
-                username "tomcat"
-                password "secret"
-            }
-          
+  repositories {
+    mavenDeployer {
+      repository(
+  url "http://tomcat:secret@192.168.99.100:8888/manager/text/deploy?path=/jpetstore&update=true"
+             authentication(userName: "tomcat", password: "secret")
+        }
+	}  
     }
 
 uploadArchives {
