@@ -55,7 +55,6 @@ dependencies {
 
 DeployWar {
     repositories {
-        {
 	 url "http://tomcat:secret@192.168.99.100:8888/manager/text/deploy?path=/jpetstore&update=true"
             credentials {
                 username "tomcat"
@@ -64,8 +63,7 @@ DeployWar {
            
         }
     }
-}
-   
+
 uploadArchives {
   repositories {
     mavenDeployer {
