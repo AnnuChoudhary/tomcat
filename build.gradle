@@ -53,12 +53,7 @@ dependencies {
     
 }
 
-task deploy (dependsOn: war){
-    copy {
-        from "build/libs/jpetstore-6.0.3-SNAPSHOT.war"
-        into "http://192.168.99.100:8888/manager/html"
-        include "jpetstore-6.0.3-SNAPSHOT.war	"
-    }
+
 }
 uploadArchives {
   repositories {
