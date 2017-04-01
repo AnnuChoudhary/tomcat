@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'war'
-
+apply plugin: 'cargo'
 group = 'org.mybatis'
 version = '6.0.3-SNAPSHOT'
 
@@ -57,14 +57,20 @@ dependencies {
 }
 
 
-task deployLocal() { 
-    repositories {
-
-   upload(
-        url: "http://192.168.99.100:8888/manager/text/deploy?path=/jpetstore&update=true") {
-          authentication(userName: "tomcat", password: "secret")
-
-      
+cargo {
+    containerId = 'tomcat8x'
+    port=8888
+   // <== the webapp response port, typically 8080, in this case it is not 8080
+      deployable {
+        file = file(jpetstore-6.0.3-SNAPSHOT.war)
+        context = web_context
+        // it would be very nice to specify a remote to use here (if I have multiple remotes)
     }
-}
+      remote {
+// the deployable above knows this is the remote to use correct?, why is port not specified here?
+        protocol=scheme
+        hostname=192.168.99.100
+        username=tomcat
+        password=secret
+    }
 }
