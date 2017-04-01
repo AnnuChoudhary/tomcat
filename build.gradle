@@ -10,7 +10,7 @@ buildscript {
     dependencies {
         classpath 'bmuschko:gradle-cargo-plugin:0.3'
     }
-}
+
 cargo {
     containerId = 'tomcat6x'
     port = 8888
