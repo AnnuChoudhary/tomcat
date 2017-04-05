@@ -13,13 +13,13 @@ apply plugin: 'war'
 apply plugin: 'com.bmuschko.tomcat'
 
 // JDK version source compatibility
-sourceCompatibility = 1.5
+sourceCompatibility = 1.7
 // project version
 version = '1.0'
 // War file name
 war.baseName = 'jpetstore-6.0.3-SNAPSHOT'
 // Web directory, this overrides the default value "webapp"
-project.webAppDirName = 'WebContent'
+project.webAppDirName = 'webapps'
 
 repositories {
     mavenLocal()
